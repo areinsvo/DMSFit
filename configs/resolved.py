@@ -50,10 +50,8 @@ samples = {
     #                  ,"ttH_tm"                    :['singlemuontop','tth',1,0] 
     ,"Zll_tmn"       	       :['singlemuontop','zll',1,0]
     ,"Wlv_tmn"                    :['singlemuontop','wjets',1,0]
-    ,"Diboson_tmn"                :['singlemuontop','dibosons',1,0]
     ,"ttbar_tmn"                  :['singlemuontop','ttbar',1,1]
     ,"ST_tmn"                     :['singlemuontop','stop',1,0]
-    ,"QCD_tmn"                    :['singlemuontop','qcd',1,0]
     ,"Data_tmn"        	       :['singlemuontop','data',0,0]
     
     # Single muon (w) control
@@ -80,10 +78,8 @@ samples = {
     #                  ,"ttH_te"                    :['singleelectrontop','tth',1,0] 
     ,"Zll_ten"                    :['singleelectrontop','zll',1,0]
     ,"Wlv_ten"                    :['singleelectrontop','wjets',1,0]
-    ,"Diboson_ten"                :['singleelectrontop','dibosons',1,0]
     ,"ttbar_ten"                  :['singleelectrontop','ttbar',1,0]
     ,"ST_ten"                     :['singleelectrontop','stop',1,0]
-    ,"QCD_ten"                    :['singleelectrontop','qcd',1,0]
     ,"Data_ten"                   :['singleelectrontop','data',0,0]
     # Single electron (w) control
     #                  ,"VH_wen"                    :['singleelectronw','vh',1,0] 
@@ -111,7 +107,7 @@ for mass in range(0,len(cutstrings)):
     for s in ['pass','fail']:
         resolved_category[s+str(mass)] = {
              'name':"resolved_"+s+"_mass"+str(mass)
-            ,'in_file_name':"/uscms_data/d3/matteoc/analysis/CMSSW_8_0_29/src/PandaAnalysis/SuperMonoJet/fitting/resolved/fittingForest_resolved_"+s+".root"
+            ,'in_file_name':"/uscms/home/ahall/nobackup/LPC-DM/CMSSW_8_0_29/src/PandaAnalysis/SuperMonoJet/fitting/resolved/fittingForest_resolved_"+s+".root"
             ,"cutstring":cutstrings[mass]
             ,"varstring":["min(999.9999,met)",250,3000]
        	    ,"weightname":"weight"
